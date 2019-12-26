@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.450fa70e86f35364f21b77dd65217b64.js"
+  "/hot-house/precache-manifest.99575225ad11e0b92791be362b5423c0.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "hot-house"});
