@@ -1,4 +1,7 @@
 # hot-house
+This is a vue interface to a custom api for controlling the heating at home.
+
+It's designed to be built and deployed on github pages and then used as a PWA.
 
 ## Project setup
 ```
