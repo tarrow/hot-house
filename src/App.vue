@@ -27,7 +27,7 @@
       wrap
     >
       <v-flex>  
-        <v-btn x-large color="success" dark>Heating On</v-btn>
+        <v-btn x-large color="success" v-on:click="heatingOn" dark>Heating On</v-btn>
       </v-flex>
       </v-layout>
     </v-content>
@@ -36,11 +36,19 @@
 
 <script>
 
+import axios from 'axios';
+
 export default {
   name: 'App',
 
   data: () => ({
     //
   }),
+
+  methods: {
+    heatingOn: () => {
+      axios.get('http://192.168.1.127:8080/on');
+    }
+  }
 };
 </script>
