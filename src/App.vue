@@ -26,8 +26,13 @@
       text-center
       wrap
     >
-      <v-flex>  
-        <v-btn x-large color="success" v-on:click="heatingOn" dark>Heating On</v-btn>
+      <v-flex>
+        <div class="my-2">
+          <v-btn x-large color="success" v-on:click="heatingOn" dark>Heating On</v-btn>
+        </div>
+        <div class="my-2">
+          <v-btn x-large color="failure" v-on:click="heatingOff" dark>Heating Off</v-btn>
+        </div>
       </v-flex>
       </v-layout>
     </v-content>
@@ -48,7 +53,10 @@ export default {
   methods: {
     heatingOn: () => {
       axios.get('http://192.168.1.127:8080/on');
-    }
+    },
+    heatingOff: () => {
+      axios.get('http://192.168.1.127:8080/off');
+    },
   }
 };
 </script>
